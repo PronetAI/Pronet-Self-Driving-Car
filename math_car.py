@@ -1,9 +1,6 @@
 import math
 def rectLineIntersect (x, y, w, h, pt1, pt2):
-    rectL1 = ((x,y), (x+w,y))
-    rectL2 = ((x,y), (x,y+h))
-    rectL3 = ((x+w,y), (x+w,y+h))
-    rectL4 = ((x,y+h), (x+w,y+h))
+    rectL1, rectL2, rectL3, rectL4 = ((x,y), (x+w,y)), ((x,y), (x,y+h)), ((x+w,y), (x+w,y+h)), ((x,y+h), (x+w,y+h))
     poi1 = calculatePOI((x,y),(x+w,y), pt1, pt2) != False
     poi2 = calculatePOI((x,y),(x,y+h), pt1, pt2) != False
     poi3 = calculatePOI((x+w,y),(x+w,y+h), pt1, pt2) != False
